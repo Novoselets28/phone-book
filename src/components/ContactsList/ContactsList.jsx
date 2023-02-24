@@ -1,7 +1,12 @@
+import "./ContactsList.css"
+
+
 const ContactsListItem = ({id,name,surname,phone,onRemove}) => {
-    return <li>
-        {name} {surname}: {phone} <button onClick={() => onRemove(id)}>delete</button>
-    </li>
+    return (
+        <li key={id} className="contacts-item">
+            {name} {surname}: {phone} <button onClick={() => onRemove(id)}>delete</button>
+        </li>
+    )
 }
 
 const ContactsList = ({contacts, onRemove}) => {

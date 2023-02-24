@@ -37,9 +37,55 @@
   }
 }
 
-
-.open-btn{
-  margin: 10px 20px;
-  padding: 20px;
-  font-size: 20rem;
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(214, 203, 185);
+  color: black;
 }
+
+.container input{
+  display:block;
+  margin:0 0 15px 0;
+  padding:10px;
+  width:250px;
+  border:1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+}
+
+.container input:focus {
+  box-shadow:0 0 2px 1px rgb(1, 98, 1);
+  transition-duration: 1s;
+}
+
+.btn{
+  padding: 0 32px;
+  height: 48px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #a25dcf;
+  color: white;
+  cursor: pointer;
+  margin: 0 8px;
+  border-radius: 5px;
+  border: none;
+}
+.btn01 {
+     animation: background 1.6s ease infinite;
+}
+
+     @keyframes background {
+        0% {
+           background-color: #a25dcf;
+        }
+        50% {
+           background-color: #481967;
+        }
+        10% {
+           background-color: #a25dcf;
+        }
+     }

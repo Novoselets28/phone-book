@@ -3,7 +3,6 @@ import { Component } from 'react';
 import ContactsForm from './components/ContactForm/ContactsForm';
 import ContactsList from './components/ContactsList/ContactsList';
 import Filter from './components/Filter/Filter';
-// import Modal from './components/Modal/Modal';
 
 
 class App extends Component {
@@ -50,18 +49,18 @@ class App extends Component {
     const visibleContact = this.getVisibleContact();
 
 
-    return <>
+    return (
+    <div className='container'>
       <h1>Form Contact</h1>
-      {/* <ContactsForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUniqueContact}/> */}
-      <h2>Contacts Filter</h2>
-      <Filter filter={filter} onChange={this.handleFilterChange}/>
-      <ContactsList contacts={visibleContact} onRemove={this.handleRemoveContact}/>
-      <button onClick={this.setVisibleForm}> Add
-        {this.state.isVisibleForm && (
-                <ContactsForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUniqueContact} setVisibleForm={this.isVisibleForm}/>
-        )}
-      </button>
-    </>
+        <h2>Contacts Filter</h2>
+        <Filter filter={filter} onChange={this.handleFilterChange}/>
+        <ContactsList contacts={visibleContact} onRemove={this.handleRemoveContact}/>
+        <button className='btn btn01' onClick={this.setVisibleForm}> Add </button>
+          {this.state.isVisibleForm && (
+              <ContactsForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUniqueContact} setVisibleForm={this.isVisibleForm}/>
+          )}
+    </div>
+    )
   }
 }
 

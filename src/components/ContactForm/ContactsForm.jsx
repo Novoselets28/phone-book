@@ -1,4 +1,5 @@
 import { Component } from "react";
+import './ContactsForm.css'
 
 const INITIAL_STATE = {
     name: '',
@@ -42,12 +43,16 @@ class ContactsForm extends Component {
     render() {
         const {name, surname, phone} = this.state
         return(
-            <form onSubmit={this.handleFormSubmit}>
-                <input type="text" name="name" placeholder="Enter name" value={name} onChange={this.handleChangeForm}></input>
-                <input type="text" name="surname" placeholder="Enter surname" value={surname} onChange={this.handleChangeForm}></input>
-                <input type="tel" name="phone" placeholder="Enter phone number" value={phone} onChange={this.handleChangeForm}></input>
-                <button type="submit">Add contact</button>
-            </form>
+            <div className="contacts-block">
+                <h2>Add new contact</h2>
+                <form className="form-block" onSubmit={this.handleFormSubmit}>
+                    <input type="text" name="name" placeholder="Enter name" value={name} onChange={this.handleChangeForm}></input>
+                    <input type="text" name="surname" placeholder="Enter surname" value={surname} onChange={this.handleChangeForm}></input>
+                    <input type="tel" name="phone" placeholder="Enter phone number" value={phone} onChange={this.handleChangeForm}></input>
+                    <button className="btn btn01" type="submit">Add contact</button>
+                </form>
+            </div>
+            
         )
     }
 }

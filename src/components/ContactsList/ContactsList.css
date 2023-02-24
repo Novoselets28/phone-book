@@ -1,0 +1,32 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-item{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin: 0 0 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-item button{
+    padding: 9px;
+    height: 32px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #a25dcf;
+    color: white;
+    cursor: pointer;
+    margin: 4px;
+    border-radius: 5px;
+    border: none;
+}
